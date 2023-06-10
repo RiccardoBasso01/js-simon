@@ -1,5 +1,6 @@
 body{
     background-color: #f2f2f2;
+    color: rgb(87, 87, 87);
 }
 
 header{
@@ -30,6 +31,77 @@ h1 img{
 }
 
 /***** card *****/
+.card-subtitles{
+    min-width: calc(100px + 1.7vw);
+    min-height: calc(100px + 1.7vw);
+    border-radius: 50%;
+    padding: 0;
+    margin-bottom: 45px;
+
+    line-height: calc(100px + 1.7vw);
+}
+
+/***** pre-game *****/
+#pre-game{
+    background-color: var(--light-grey);
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    min-height: 200px;
+
+    position: relative;
+}
+
+
+/***** play *****/
+#play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgb(107, 0, 0);
+    color: rgb(255, 119, 119);
+
+    font-weight: 700;
+    font-size: calc(0.5rem + 1.7vw);
+
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid var(--grey);
+
+    animation: beat-1  1s infinite alternate linear;
+}
+
+@keyframes beat-1{
+    from{
+        min-width: calc(100px + 2.5vw);
+        min-height: calc(50px + 2.5vw); 
+    }
+    to{
+        min-width: calc(120px + 2.5vw);
+        min-height: calc(70px + 2.5vw);
+    }
+} 
+
+
+#timer{
+    font-size: calc(2rem + 1.7vw);
+}
+
+.last-seconds{
+    color: red;
+    animation: beat-2 0.5s infinite alternate ease-out;
+}
+
+@keyframes beat-2{
+    from{
+        font-size: calc(2rem + 1.7vw);
+    }
+    to{
+        font-size: calc(3rem + 1.7vw);
+    }
+} 
+
 .number{
     width: calc(50px + 1.7vw);
     height: calc(50px + 1.7vw);
@@ -37,18 +109,9 @@ h1 img{
 
     background-color: var(--light-grey);
     border: 1px solid var(--grey);
-}
+    font-weight: 600;
 
-#timer{
-    font-size: calc(2rem + 1.7vw);
-}
-
-.card-subtitles{
-    width: calc(100px + 1.7vw);
-    height: calc(100px + 1.7vw);
-    border-radius: 50%;
-    padding: 0;
-    margin-bottom: 45px;
-
-    line-height: calc(100px + 1.7vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

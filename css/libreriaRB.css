@@ -7,6 +7,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: calc(0.7rem + 1.7vw);
 }
 
 :root {
@@ -44,6 +45,10 @@ h2{
 
 h3{
     font-size: calc(0.8rem + 1.7vw);
+}
+
+.d-none{
+    display: none;
 }
 
 /**************************** Flex *******************************/
