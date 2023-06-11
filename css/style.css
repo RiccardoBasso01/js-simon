@@ -14,7 +14,8 @@ header{
     border-bottom: 1px solid var(--grey);
 }
 
-h1{
+h1,
+h3{
     background-color: var(--light-grey);
     margin: 10px;
     padding: 10px 20px;
@@ -155,4 +156,29 @@ h1 img{
 #check:hover{
     cursor: pointer;
     background-color: var(--blue);
+}
+
+/*** risultato ***/
+.right,
+.wrong,
+.result{
+   border-radius: 20px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+.right{
+    border: 1px solid green; 
+    background-color: rgb(87, 252, 87);
+}
+
+.wrong{
+   border: 1px solid red; 
+   background-color: rgb(255, 97, 97);
+   color: white;
+}
+
+.result{
+    border: 1px solid var(--grey);
+    background-color: var(--light-grey);
 }

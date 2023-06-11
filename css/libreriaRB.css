@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: calc(0.7rem + 1.7vw);
+    font-size: calc(0.8rem + 1.3vw);
 }
 
 :root {
@@ -38,15 +38,15 @@ a {
 }
 
 h1{
-    font-size: calc(1.6rem + 1.7vw);
+    font-size: calc(1.6rem + 1.3vw);
 }
 
 h2{
-    font-size: calc(1rem + 1.7vw);
+    font-size: calc(1rem + 1.3vw);
 }
 
 h3{
-    font-size: calc(0.8rem + 1.7vw);
+    font-size: calc(0.8rem + 1.3vw);
 }
 
 .d-none{
@@ -142,7 +142,7 @@ h3{
     min-height: 50px;
     min-width: 200px;
     text-align: center;
-    font-size: calc(0.8rem + 1.7vw);
+    font-size: calc(0.5rem + 1.3vw);
     
 }
 

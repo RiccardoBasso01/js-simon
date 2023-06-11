@@ -15,6 +15,7 @@ const number = document.querySelectorAll('.number');
 const formControl = document.querySelectorAll('.form-control');
 const check = document.getElementById('check');
 
+const restart = document.getElementById('restart');
 
 
 // Al click "INIZIA" 
@@ -28,7 +29,7 @@ play.addEventListener('click', function () {
     }
     
     // Timer di 30s
-    let second = 1;
+    let second = 30;
     timer.innerText = second;
 
     const time = setInterval(() => {
@@ -60,21 +61,19 @@ play.addEventListener('click', function () {
     check.addEventListener('click', function(){
         for(let i = 0; i < number.length; i++){
             if(number[i].innerText === formControl[i].value){
-                resultValue += `<div>${[i + 1]} Giusto </div>`
+                resultValue += `<div class="right">${[i + 1 + '°']} Giusto </div>`
                 point++;
             }else{
-                resultValue += `<div>${[i + 1]} Sbagliato </div>`
+                resultValue += `<div class="wrong">${[i + 1 + '°']} Sbagliato </div>`
             }
         }
     console.log(resultValue)
       // Risultato
       result.className = '';
-      result.innerHTML = resultValue + `Hai totalizzato ${point} punti`;
+      result.innerHTML = resultValue + `<div class="result">Hai totalizzato ${point} punti </div>`;
 
         form.style.display = 'none';
     })
-
-  
 
 })
 
