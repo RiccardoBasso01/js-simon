@@ -19,7 +19,6 @@ const check = document.getElementById('check');
 
 // Al click "INIZIA" 
 play.addEventListener('click', function () {
-
     preGame.classList.add('d-none');
     game.classList.remove('d-none');
 
@@ -63,6 +62,8 @@ play.addEventListener('click', function () {
     }, 300);
 
     // Form
+    for(let i = 0; i < formControl.length; i++){formControl[i].value = '';} // Reset numeri inseriti
+
     let resultValue = '';
     let point = '0';
     check.addEventListener('click', function () {
