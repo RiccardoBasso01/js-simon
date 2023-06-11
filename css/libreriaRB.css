@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: calc(0.8rem + 1.3vw);
+    font-size: var(--font-size-m);
 }
 
 :root {
@@ -28,6 +28,12 @@ body{
     --orange: #fabb05;
     --light-orange: rgb(244, 213, 141);
     --dark-red:  rgb(107, 0, 0);
+ 
+    --font-size-s: calc(0.5rem + 1vw);
+    --font-size-m: calc(0.7rem + 1vw);
+    --font-size-l:  calc(0.8rem + 1.1vw);
+    --font-size-xl: calc(1rem + 1.1vw);
+    --font-size-xxl: calc(1.6rem + 1.1vw);
 
 }
 
@@ -38,19 +44,32 @@ a {
 }
 
 h1{
-    font-size: calc(1.6rem + 1.3vw);
+    font-size: var(--font-size-xxl);
 }
 
 h2{
-    font-size: calc(1rem + 1.3vw);
+    font-size: var(--font-size-xl);
 }
 
 h3{
-    font-size: calc(0.8rem + 1.3vw);
+    font-size: var(--font-size-l);
 }
 
 .d-none{
     display: none;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/**************************** Margin e Padding *******************************/
+.ml-1{
+    margin-left: 10px;
+}
+
+.mr-1{
+    margin-right: 10px;
 }
 
 /**************************** Flex *******************************/
@@ -70,6 +89,10 @@ h3{
 .column.space-between-X{
     display: flex;
     align-content: space-between;
+}
+
+.gap-1{
+    gap: 10px;
 }
 
 /**************************** Cards *******************************/
@@ -140,14 +163,12 @@ h3{
     border: 1px solid var(--grey);
     padding: 5px;
     min-height: 50px;
-    min-width: 200px;
+    min-width: calc(200px + 1.3vw);
     text-align: center;
-    font-size: calc(0.5rem + 1.3vw);
-    
+    font-size: var(--font-size-m);
 }
 
 .form-label{
-    /* border: 1px solid var(--grey); */
     border-radius: 20px;
     padding: 5px;
 

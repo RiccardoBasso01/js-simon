@@ -158,6 +158,22 @@ h1 img{
     background-color: var(--blue);
 }
 
+label{
+    display: block;
+}
+
+.form-control{
+    font-weight: 600;
+    color: var(--blue);
+    text-shadow: 0 0 5px var(--light-blue);
+}
+
+.form-control::placeholder{
+    color: var(--light-grey);
+    text-shadow: none;
+    font-size: var(--font-size-s);
+    font-weight: 500;
+}
 /*** risultato ***/
 .right,
 .wrong,
@@ -182,6 +198,8 @@ h1 img{
     border: 1px solid var(--grey);
     background-color: var(--light-grey);
 }
+
+/*** Bottone ricomincia ***/
 
 #restart{
     padding: 10px;
