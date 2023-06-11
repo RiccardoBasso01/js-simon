@@ -28,7 +28,7 @@ play.addEventListener('click', function () {
     }
     
     // Timer di 30s
-    let second = 30;
+    let second = 1;
     timer.innerText = second;
 
     const time = setInterval(() => {
@@ -55,18 +55,26 @@ play.addEventListener('click', function () {
     }, 300);
 
     // Form
+    let resultValue = '';
+    let point = '0';
     check.addEventListener('click', function(){
         for(let i = 0; i < number.length; i++){
             if(number[i].innerText === formControl[i].value){
-                console.log(`numero ${[i]} giusto`)
+                resultValue += `<div>${[i + 1]} Giusto </div>`
+                point++;
             }else{
-                console.log(`numero ${[i]} sbagliato`)
+                resultValue += `<div>${[i + 1]} Sbagliato </div>`
             }
         }
+    console.log(resultValue)
+      // Risultato
+      result.className = '';
+      result.innerHTML = resultValue + `Hai totalizzato ${point} punti`;
 
         form.style.display = 'none';
     })
 
+  
 
 })
 
