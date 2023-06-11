@@ -7,6 +7,9 @@ const play = document.getElementById('play');
 const timer = document.getElementById('timer');
 
 const number = document.querySelectorAll('.number');
+const progressValue = document.getElementById('progress-value');
+
+const form = document.getElementById('form');
 
 // Al click "INIZIA" 
 play.addEventListener('click', function () {
@@ -28,8 +31,22 @@ play.addEventListener('click', function () {
             timer.classList.add('last-seconds');
         } else if (second <= 0) {
             clearInterval(time)
+            setTimeout(() => {game.classList.add('d-none');},1000);
         }
     }, 1000);
+
+    // Progress bar
+    let progress = 0;
+    const bar = setInterval(() => {
+        progressValue.style.width = ++progress + '%';
+        if(progress === 100){
+            clearInterval(bar);
+        }
+    }, 300);
+
+    // Form
+
+
 })
 
 // Funzione numeri random da 0 a 99

@@ -23,9 +23,11 @@ body{
     --grey: #969696;
     --light-grey: #cdcdcd;
     --blue: #4285f4;
+    --light-blue: #b4d0e7;
+    --dark-blue: #00335d;
     --orange: #fabb05;
     --light-orange: rgb(244, 213, 141);
-    --light-blue: #b4d0e7;
+    --dark-red:  rgb(107, 0, 0);
 
 }
 
