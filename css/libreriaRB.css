@@ -133,3 +133,27 @@ h3{
         width: 937px;
     }
 }
+
+/*********************************** form ***************************************/
+.form-control{
+    border-radius: 20px;
+    border: 1px solid var(--grey);
+    padding: 5px;
+    min-height: 50px;
+    min-width: 200px;
+    text-align: center;
+    font-size: calc(0.8rem + 1.7vw);
+    
+}
+
+.form-label{
+    /* border: 1px solid var(--grey); */
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.form-control:focus-visible{
+    outline: none;
+    border: 2px solid var(--light-blue);
+}

@@ -132,3 +132,27 @@ h1 img{
 
     transition: width 0.3s linear;
 }
+
+
+/*** form ***/
+#form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#check{
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--light-blue);
+    color: white;
+    font-weight: 600;
+    font-size: calc(0.7rem + 1.7vw);
+}
+
+#check:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+}

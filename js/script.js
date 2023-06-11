@@ -1,15 +1,21 @@
 console.log('JS OK');
 
-const game = document.getElementById('game');
+// Sezioni principali
 const preGame = document.getElementById('pre-game');
+const game = document.getElementById('game');
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
 
 const play = document.getElementById('play');
 const timer = document.getElementById('timer');
-
-const number = document.querySelectorAll('.number');
 const progressValue = document.getElementById('progress-value');
 
-const form = document.getElementById('form');
+const number = document.querySelectorAll('.number');
+const formControl = document.querySelectorAll('.form-control');
+const check = document.getElementById('check');
+
+
 
 // Al click "INIZIA" 
 play.addEventListener('click', function () {
@@ -31,7 +37,11 @@ play.addEventListener('click', function () {
             timer.classList.add('last-seconds');
         } else if (second <= 0) {
             clearInterval(time)
-            setTimeout(() => {game.classList.add('d-none');},1000);
+            setTimeout(() => {
+                game.classList.add('d-none');
+                form.classList.remove('d-none');
+                form.style.display = 'flex';
+            },1000);
         }
     }, 1000);
 
@@ -45,6 +55,17 @@ play.addEventListener('click', function () {
     }, 300);
 
     // Form
+    check.addEventListener('click', function(){
+        for(let i = 0; i < number.length; i++){
+            if(number[i].innerText === formControl[i].value){
+                console.log(`numero ${[i]} giusto`)
+            }else{
+                console.log(`numero ${[i]} sbagliato`)
+            }
+        }
+
+        form.style.display = 'none';
+    })
 
 
 })
